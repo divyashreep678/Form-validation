@@ -1,0 +1,53 @@
+body{
+  background-image:url(images\ floral.jpg);background-repeat: no-repeat;background-size: cover;
+  
+}
+
+.abc{
+  margin:100px 330px 290px 450px;
+  color: azure;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#fname{
+  width: 250px;
+  height: 16px;
+}
+#lname{
+  width: 250px;
+  height: 16px;
+
+}
+
+#DOB{
+  width:230px;
+  height:22px;
+
+}
+
+#PhoneNo{
+  width: 260px;
+ height: 18px;
+}
+
+#Email{
+  width: 290px;
+  height: 18px;
+
+}
+#myAdr{
+  width: 350px;
+
+}
+#Pwd{
+  width: 270px;
+  height: 18px;
+
+}
+
+#CP{
+  width: 200px;
+  height: 18px;
+
+}

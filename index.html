@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  
+    <script>
+      // function myFunction() {
+      //   alert("Please Enter First Name!");
+      // }
+  
+      function myFunction(){
+      var fname=document.getElementById("fname").value;
+      
+      if (fname==""){
+          alert("Username is obligatory")
+      }
+  
+      var lname=document.getElementById("lname").value;
+      
+      if (lname==""){
+          alert("enter last name")
+      }
+  
+      var DOB=document.getElementById("DOB").value;
+      
+      if (DOB==""){
+          alert("DOB is required")
+      }
+  
+      // var Gender =document.getElementById("Gender").value;
+      
+      // if (Gender==""){
+      //     alert("select gender")
+      // }
+    
+      //phone
+          var text =document.getElementById('PhoneNo').value;      
+          var regx = /^[6-9]\d{9}$/;
+         // var PhoneNo= document.getElementById('PhoneNo').maxLength="10"
+          if(regx.test(text))
+          {
+          //alert("valid");
+          //return true;   
+        }    
+      else
+           alert("enter valid PhoneNo");
+      
+        
+  
+     
+      var Email=document.getElementById("Email").value;
+      var regx =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      //var regx =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      
+      if (regx.test(Email))
+    {
+      //return (true)
+    }
+      alert("Enter Email id !")
+      // return (false)   
+  
+  
+  // check box
+  
+  var chkBox = document.getElementsByName('chkHobbies[]');
+      var lenChkBox = chkBox.length;
+      //alert(lenChkBox)
+      var valid=0;
+      for(var i=0;i<lenChkBox;i++) {
+        if(chkBox[i].checked==true) {
+          valid=1;
+          break;
+        }
+      }
+      if(valid==0) {
+        msg=' select  hobby';
+        alert(msg);
+        return false;
+      }
+      // return true;
+   
+  
+  
+    // address
+   var Address=document.getElementById("myAdr").value; 
+   if(Address== "") { 
+    {
+          alert("confirm Address")
+      }
+         
+    }
+  
+    
+  
+  // password
+       
+    var Pwd = document.getElementById("Pwd").value;  
+    var CP = document.getElementById("CP").value;  
+    if(Pwd != CP)  
+    {   
+      alert("Passwords did not match");  
+    } else {  
+      // alert("Password created successfully");  
+    }  
+    
+  
+  // reset
+  // {  
+  //    document.getElementById("myForm").reset();  
+  //  }  
+  
+    }
+  
+      </script>
+  
+  <div class="abc">
+  
+    <form >
+     
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br><br>
+  
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br><br>
+  
+  
+  <label for="DOB">Date of birth:</label>
+  <input type="date" id="DOB" name="lname" placeholder="DD/MM/YY"><br><br>
+  
+  
+   
+  <label for="PhoneNo">PhoneNo:</label>
+  <input type="text" id="PhoneNo" name="PhoneNo" placeholder="enter 10 digits phone number"><br><br>
+  
+  
+  <label for="Email">Email:</label>
+   <input type="text" id="Email" name="Email"><br><br>
+  
+  
+   <label>Hobbies</label><br>
+   <input type="checkbox" name="chkHobbies[]" id="singing" value="singing">singing</input>
+   <input type="checkbox" name="chkHobbies[]" id="dancing" value="dancing"">dancing</input>
+   <input type="checkbox" name="chkHobbies[]" id="swimmng" value="swimmng" >swimmng </input>
+  <br><br>
+   
+  
+   <label>Address</label>
+    <textarea cols="10" rows="5" id="myAdr" name="Address"></textarea><br> <br>
+   
+    <label for="Password">Password:</label>
+    <input type="text" id="Pwd"name="Password"><br><br>
+   
+    <label for="Confirm Password"> Confirm Password:</label>
+    <input type="text" id="CP" name="Confirm Password"><br><br>
+   
+    
+  <!-- <button class="test" type="submit" onclick="myFunction()" >Submit</button>
+   <button type="Reset" value="Reset" id="myForm">Reset</button><br> </br> -->
+  
+  <input type="button" onclick="myFunction()" value="Submit form" style="margin:20px 100px 50px 70px ;border: 5px solid wheat;width: 270px;height: 30px;font-style: oblique;">
+  
+  
+     </form>
+    </div>
+
+
+</body>
+</html>
